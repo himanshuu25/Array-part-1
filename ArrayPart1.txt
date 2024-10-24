@@ -1,0 +1,174 @@
+//..................................minimum in the array...................................
+
+#include<iostream>
+using namespace std;
+int main(){
+    int arr[5]={75,69,68,98,91},min=arr[0];
+    for(int i=0;i<5;i++){
+        if(min>arr[i])
+        min=arr[i];
+    }
+    cout<<min;
+}
+
+// .................................maximum in the array.........................
+
+#include<iostream>
+using namespace std;
+int main(){
+    int arr[5]={75,69,68,-15,91},max=-1;
+    for(int i=0;i<5;i++){
+        if(max<arr[i])
+        max=arr[i];
+    }
+    cout<<max;
+}
+
+//......................................simple example....................
+
+#include<iostream>
+using namespace std;
+void arr(int a[],int n){
+    for(int i=0;i<4;i++){
+        a[i]=i++;
+    }
+
+}
+int main(){
+    int a[]={3,4,5,7};
+    arr(a,4);
+     for(int i=0;i<4;i++){
+       cout<<a[i]<<endl;
+    }
+}
+
+//......................................linear search in the array....................
+
+#include<iostream>
+using namespace std;
+int check(int a[],int n,int item){
+    int val;
+    for(int i=0;i<n;i++){
+        if(item==a[i]){
+            return i;}
+    }
+    return -1;
+    
+}
+int main(){
+
+    int arr[]={10,52,46,32,98},item=98;
+   cout<<check(arr,5,item);
+}
+
+//......................................reverse the array....................
+
+#include<iostream>
+using namespace std;
+void rev(int a[],int n){
+    for(int i=0,j=n-1;i<j;i++,j--){
+        int temp=a[i];
+        a[i]=a[j];
+        a[j]=temp;
+
+    }
+    cout<<"in the function \n";
+    for(int i=0;i<n;i++){
+        cout<<a[i];
+    }
+}
+int main(){
+    int a[]={1,2,3,4,5};
+    rev(a,5);
+    cout<<"\nin the main function\n";
+    for(int i=0;i<5;i++){
+        cout<<a[i];
+    }
+return 0;
+}
+
+//...................................swap function.........................
+
+#include<iostream>
+using namespace std;
+int main(){
+    int a=10,b=90;
+    swap(a,b);
+    cout<<a<<b;
+}
+
+//...........................sum of array lement....................
+
+#include<iostream>
+using namespace std;
+int main(){
+    int a[]={1,2,3,3,5,7},sum=0;
+    for(int i=0;i<6;i++){
+        sum=sum+a[i];
+
+    }
+    cout<<sum;
+}
+
+//..............................display all uniqe elements from array.................
+
+#include<iostream>
+using namespace std;
+int main(){
+    int a[20]={10,20,30,20,50},i,j;
+    for(i=0;i<5;i++){
+        int count=0;
+        for( j=0;j<5;j++){
+            if(i!=j){
+                if(a[i]==a[j]){
+                    count++;
+                }
+            }
+        }
+        if(count==0){
+            cout<<a[i];
+        }
+    }
+    return 0;
+}
+
+//..............................swap min and max in the array........................
+
+#include<iostream>
+using namespace std;
+int main(){
+    int a[]={10,20,30,20,50},i,j,min=a[0],max=-1,m=0,n=0;
+    for(i=0;i<5;i++){
+        if(max<a[i]){
+        max=a[i];
+        m=i;
+        }
+        else if(min>a[i]){
+        min=a[i];
+        n=i;
+        }
+    }
+    for(i=0;i<5;i++){
+        a[m]=min;
+        a[n]=max;
+    }
+     for(i=0;i<5;i++){
+        cout<<a[i];
+    }
+    return 0;
+}
+
+//..............................intersaction of two array........................
+
+#include<iostream>
+using namespace std;
+int main(){
+    int a[]={1,2,3},b[]={1,2,3};
+    cout<<"the common element is \n";
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            if(a[i]==b[j])
+            cout<<a[i]<<endl;
+        }
+    }
+}
