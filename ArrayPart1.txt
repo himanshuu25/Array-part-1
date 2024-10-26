@@ -172,3 +172,28 @@ int main(){
         }
     }
 }
+
+//.....................................insert into first......................................
+#include<iostream>
+using namespace std;
+int main(){
+    int a[20]={1,2,5,3,6,5},n;
+    cout<<"enter the item";
+    cin>>n;
+    for(int i=5;i>=0;i--){
+        a[i+1]=a[i];
+    }
+    a[0]=n;
+     for(int i=0;i<=6;i++){
+       cout<<a[i]<<endl;
+    }
+    }
+//.................................simple doubt...........................................................
+    #include<iostream>
+    using namespace std;
+    int main(){
+        int a[5]={1,2};
+        for(int i=0;i<5;i++){
+            cout<<a[i];
+        }
+    }
